@@ -1,14 +1,14 @@
-import Hero from '../components/Hero'
-import Navbar from '../components/Navbar'
-import SectionHeader from '../components/section-header'
-import MainBlock from '../components/MainBlock'
-import Budget from '../components/Budget'
-import Script from 'next/script'
-import Gallery from '../components/Gallery'
-import Testimonial from '../components/Testimonial'
-import Appoinment from '../components/Appoinment'
-import Footer from '../components/Footer'
-import About from '../components/About'
+import Hero from "../components/Hero"
+import Navbar from "../components/Navbar"
+import SectionHeader from "../components/section-header"
+import MainBlock from "../components/MainBlock"
+import Budget from "../components/Budget"
+import Script from "next/script"
+import Gallery from "../components/Gallery"
+import Testimonial from "../components/Testimonial"
+import Appoinment from "../components/Appoinment"
+import Footer from "../components/Footer"
+import About from "../components/About"
 
 export default function Home() {
   return (
