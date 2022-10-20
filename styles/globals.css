@@ -17,3 +17,16 @@
     height: 100px;
 }
 
+.Main-section{
+    background-image: url("../public/img/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .Main-section{
+        height: auto;
+    }
+}

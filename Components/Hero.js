@@ -34,7 +34,7 @@ const Hero = () => {
                 </div>
               </h1>
               <p className="font-semibold lg:text-lg md:text-sm text-blue-700">You Can Get the care you need 24/7 - be it online or in person. You will be treated by caring specialist doctor.</p>
-              <button className="mt-5 text-white bg-indigo-500 border-0 lg:py-2 lg:px-6 px-4 py-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">Make an Appoinment</button>
+              <a href="#appoinment"><button className="mt-5 text-white bg-indigo-500 border-0 lg:py-2 lg:px-6 px-4 py-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">Make an Appoinment</button></a>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
               <Image className="object-cover object-center rounded" alt="hero" src={ HeroImage } />
