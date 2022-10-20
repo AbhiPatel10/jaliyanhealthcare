@@ -1,7 +1,6 @@
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import SectionHeader from '../components/section-header'
-import Link from 'next/link'
 import MainBlock from '../components/MainBlock'
 import Budget from '../components/Budget'
 import Script from 'next/script'
