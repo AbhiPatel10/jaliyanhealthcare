@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-// import { FontAwesomeIcon } from '@crossOrigin'
 import DoctorIcon from '../public/img/icon-doctor.png'
 
 const SectionHeader = (props) => {
