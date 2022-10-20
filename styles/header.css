@@ -1,0 +1,19 @@
+.section-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-header-lines{
+  margin: auto;
+}
+.section-header-span, .line-1 , .line-2{
+  width: 50px;
+  border-bottom: 2px solid blue;
+}
+.section-header-lines{
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

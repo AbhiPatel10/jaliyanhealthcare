@@ -1,0 +1,20 @@
+.hero-line-dash {
+  height: 1px;
+  padding: 0;
+  border-bottom: 3px solid rgb(78, 78, 255);
+  width: 70px;
+  margin-right: 10px;
+}
+.hero-committed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-section {
+  background-image: url("../public/img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height: 90vh; */
+}
