@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("tailwindcss"), require("precss"), require("autoprefixer")],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 }
 
 
