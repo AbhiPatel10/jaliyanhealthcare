@@ -15,7 +15,7 @@ import Eight from '../public/img/9.jpeg'
 const Gallery = () => {
     return (
         <>
-            <div className="container Gallery-container mb-">
+            <div className="container-gallery Gallery-container mb-">
                 <div className="image-gallery">
                     <div className="column">
                         <div className="image-item">
@@ -47,10 +47,10 @@ const Gallery = () => {
                     </div>
                     <div className="column">
                         <div className="image-item">
-                            <div className="image-item">
-                                <Image className='Gallery-image' src={ First } alt="" />
-                                <div className="overlay"></div>
-                            </div>
+                            <Image className='Gallery-image' src={ First } alt="" />
+                            <div className="overlay"></div>
+                        </div>
+                        <div className="image-item">
                             <Image className='Gallery-image' src={ Eight } alt="" />
                             <div className="overlay"></div>
                         </div>

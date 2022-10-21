@@ -7,7 +7,7 @@ const SectionHeader = (props) => {
     <>
       {
         props.title.length ?
-          <div className='section-header'>
+          <div className='section-header xs:mt-5 mt-12'>
             <div>
               <p className='text-4xl mb-2'>{ props.title }</p>
               <div className='section-header-lines'>

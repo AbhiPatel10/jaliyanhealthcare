@@ -8,8 +8,8 @@ const Hero = () => {
 
   const TEXTS = [
     "Health",
-    "Sushi",
-    "Steak"
+    "Life",
+    "Family"
   ];
   React.useEffect(() => {
     const intervalId = setInterval(() =>

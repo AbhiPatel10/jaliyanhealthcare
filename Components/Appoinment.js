@@ -1,17 +1,54 @@
 import React, { useState } from 'react'
+import { Name_REGEX, Mobile_REGEX } from "../helper/validation"
+
 
 const Appoinment = () => {
     const [Name, setName] = useState('')
+    const [NameError, setNameError] = useState('')
     const [Number, setNumber] = useState()
+    const [NumberError, setNumberError] = useState()
     const [Date, setDate] = useState('')
+    const [DateError, setDateError] = useState('')
     const [Time, setTime] = useState('')
+    const [TimeError, setTimeError] = useState('')
     const [Message, setMessage] = useState('')
 
-    console.log(Name)
+    console.log(NameError)
 
-    const SumbitForm =(event)=>{
+    function Projectvalidator() {
+        let formIsValid = true;
+        if (!Name_REGEX.test(Name) === true) {
+            formIsValid = false;
+            setNameError("Enter Valid Name");
+        } if (!Mobile_REGEX === true) {
+            formIsValid = false;
+            setNumberError("Enter valid Number");
+        } if (Date.length === 0) {
+            formIsValid = false;
+            setDateError("Please Select Valid Date");
+        } if (Time.length === 0) {
+            formIsValid = false;
+            setTimeError("Please Select Between 9:00 AM to 10:00 PM");
+        }
+        return formIsValid;
+    }
+    const SumbitForm = async (event) => {
         console.log("Runnnnnn")
         event.preventDefault();
+        if (Projectvalidator()) {
+            const data = { Name, Number, Date, Time, Message }
+
+            let res = await fetch(`http://localhost:3000/api/email`, {
+                method: 'POST',
+                headers: {
+                    'content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+
+            let Response = await res.json()
+            console.log("Response", Response)
+        }
     }
     return (
         <>
@@ -33,24 +70,27 @@ const Appoinment = () => {
                         </div>
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-                        <form onSubmit={SumbitForm}>
+                        <form onSubmit={ SumbitForm }>
                             <div className="relative mb-4">
                                 <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
-                                <input onChange={ (e) => { setName(e.target.value) } } value={ Name } placeholder='Enter Your Name' type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <input onChange={ (e) => [setName(e.target.value), setNameError('')] } value={ Name } placeholder='Enter Your Name' type="text" id="name" name="name" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <span className='text-xs text-red-500'>{ NameError }</span>
                             </div>
                             <div className="relative mb-4">
                                 <label htmlFor="number" className="leading-7 text-sm text-gray-600">Number</label>
-                                <input onChange={ (e) => { setNumber(e.target.value) } } value={ Number } placeholder='Enter Your Number' type="number" id="number" name="number" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <input onChange={ (e) => [setNumber(e.target.value), setNumberError('') ] } value={ Number } placeholder='Enter Your Number' type="number" id="number" name="number" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <span className='text-xs text-red-500'>{ NumberError }</span>
                             </div>
                             <div className="relative mb-4 w-full flex">
                                 <div className='w-1/2 pr-1'>
                                     <label htmlFor="date" className="leading-7 text-sm text-gray-600">Date</label>
-                                    <input onChange={ (e) => { setDate(e.target.value) } } value={ Date } type="date" id="date" name="date" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input onChange={ (e) => [setDate(e.target.value), setDateError('') ] } value={ Date } type="date" id="date" name="date" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <span className='text-xs text-red-500'>{ DateError }</span>
                                 </div>
                                 <div className='w-1/2'>
                                     <label htmlFor="time" className="leading-7 text-sm text-gray-600">Time</label>
-                                    <input onChange={ (e) => { setTime(e.target.value) } } value={ Time } type="time" id="time" name="time" min="09:00" max="22:00" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-
+                                    <input onChange={ (e) => [ setTime(e.target.value), setTimeError('') ] } value={ Time } type="time" id="time" name="time" min="09:00" max="22:00" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <span className='text-xs text-red-500'>{ TimeError }</span>
                                 </div>
                             </div>
                             <div className="relative mb-4">

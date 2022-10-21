@@ -28,7 +28,7 @@ const MainBlock = () => {
                                 </div>
                                 <h2 className="tracking-widest text-base title-font font-medium text-gray-400 ">Timing schedule</h2>
                                 <h1 className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3">Working Hours</h1>
-                                <div className="w-full flex justify-between px-5 pb-1 mt-5 text-lg"><span>Mon - Sun :</span><span>9:00 AM - 10:00 PM</span></div>
+                                <div className="w-full flex justify-between px-5 pb-1 mt-12 text-lg"><span>Mon - Sun :</span><span>9:00 AM - 10:00 PM</span></div>
                                 <hr></hr>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ const MainBlock = () => {
                                 </div>
                                 <h2 className="tracking-widest text-base title-font font-medium text-gray-400 ">Emegency Cases</h2>
                                 <h1 className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3">+91 - 9722335066</h1>
-                                <p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
+                                <p>Get ALl time support for emergency. We have introduced the principle of family medicine. Get Conneted with us for any urgency .</p>
                             </div>
                         </div>
 
