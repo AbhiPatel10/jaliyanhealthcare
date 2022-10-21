@@ -78,18 +78,18 @@ const Appoinment = () => {
                             </div>
                             <div className="relative mb-4">
                                 <label htmlFor="number" className="leading-7 text-sm text-gray-600">Number</label>
-                                <input onChange={ (e) => [setNumber(e.target.value), setNumberError('') ] } value={ Number } placeholder='Enter Your Number' type="number" id="number" name="number" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <input onChange={ (e) => [setNumber(e.target.value), setNumberError('')] } value={ Number } placeholder='Enter Your Number' type="number" id="number" name="number" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 <span className='text-xs text-red-500'>{ NumberError }</span>
                             </div>
                             <div className="relative mb-4 w-full flex">
                                 <div className='w-1/2 pr-1'>
                                     <label htmlFor="date" className="leading-7 text-sm text-gray-600">Date</label>
-                                    <input onChange={ (e) => [setDate(e.target.value), setDateError('') ] } value={ Date } type="date" id="date" name="date" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input onChange={ (e) => [setDate(e.target.value), setDateError('')] } value={ Date } type="date" id="date" name="date" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                     <span className='text-xs text-red-500'>{ DateError }</span>
                                 </div>
                                 <div className='w-1/2'>
                                     <label htmlFor="time" className="leading-7 text-sm text-gray-600">Time</label>
-                                    <input onChange={ (e) => [ setTime(e.target.value), setTimeError('') ] } value={ Time } type="time" id="time" name="time" min="09:00" max="22:00" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    <input onChange={ (e) => [setTime(e.target.value), setTimeError('')] } value={ Time } type="time" id="time" name="time" min="09:00" max="22:00" required className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                     <span className='text-xs text-red-500'>{ TimeError }</span>
                                 </div>
                             </div>
@@ -98,7 +98,6 @@ const Appoinment = () => {
                                 <textarea onChange={ (e) => { setMessage(e.target.value) } } value={ Message } id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                             </div>
                             <button type='submit' className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Book Now</button>
-                            <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
                         </form>
                     </div>
                 </div>

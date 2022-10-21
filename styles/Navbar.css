@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .Navbar {
   position: sticky;
   z-index: 10;
@@ -71,6 +72,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 768px) {
+  .Navbar_Header{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+  }
   .Navbar {
     position: fixed;
     background-color: #B2DDED;

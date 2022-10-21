@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <>
-            <header>
+            <header className='Navbar_Header'>
                 <nav className='Navbar'>
                     <input id="nav-toggle" type="checkbox" />
                     <div className="logo">Jaliyan<strong>CLINIC</strong></div>
